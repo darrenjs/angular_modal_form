@@ -1,0 +1,64 @@
+<div class="modal-header">
+
+  <!-- Title -->
+  <h4 class="modal-title">My Form</h4>
+
+  <!-- X icon -->
+  <button type="button"
+          class="close"
+          aria-label="Close"
+          (click)="activeModal.dismiss('Cross click')">X
+  </button>
+</div>
+
+<!-- Form body
+
+[formGroup] -- identify class member in FormModalComponent
+
+(ngSubmit)  -- identify class method called when user submit form
+
+-->
+<form
+     [formGroup]="myForm"
+     (ngSubmit)="submitForm()"
+>
+
+  <div class="modal-boy">
+    <div class="container">
+
+      <!-- Field -->
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" formControlName="username" />
+      </div>
+
+      <!-- Field -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" formControlName="password" >
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="modal-footer">
+
+      <!-- Form submit.  This button is interpreted in browser as
+           the submit action. -->
+      <button class="btn btn-success" [disabled]="!myForm.valid">
+        Submit
+      </button>
+
+      <!-- Additional buttons.  Note that we need to have the
+           type='button' to prevent this button from being
+           interpreted as a submit button. -->
+      <button type="button"
+          class="btn btn-danger"
+          (click)="activeModal.dismiss('Close clicked')">
+          Cancel
+        </button>
+
+    </div>
+</form>
+
