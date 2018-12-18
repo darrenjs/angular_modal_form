@@ -1,6 +1,6 @@
 # NgModalForm
 
-This project demonstrates how to create a modal form in Angular 6, using
+This project demonstrates how to create a modal form in **Angular 7**, using
 plain Angular and Bootstrap.
 
 It is based on the guide [Creating Forms Inside Modals with ng-bootstrap](https://itnext.io/creating-forms-inside-modals-with-ng-bootstrap-221e4f1f5648)
